@@ -10,10 +10,10 @@ function table(){
     }
 }
 
-btn.addEventListener("click", function {
-       const newline = document.createElement("p");
+// btn.addEventListener("click", function {
+//        const newline = document.createElement("p");
     
-    newline.textContent = table;
+//     newline.textContent = table;
 
-    body.appendChild(newline);
-})
+//     body.appendChild(newline);
+// })
