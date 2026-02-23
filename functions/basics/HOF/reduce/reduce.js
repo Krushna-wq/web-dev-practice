@@ -30,7 +30,7 @@ const ShoppingCart = [
         price: 8999
     },
       {
-        itemName: "reac course",
+        itemName: "react course",
         price: 5999
     }
 ]
