@@ -41,6 +41,15 @@ const bill = ShoppingCart.reduce((acc, item) => (acc + item.price), 0)
 console.log(bill);
 
 
+const billM = ShoppingCart .filter((num) =>  {
+      console.log(ShoppingCart.price >= 5999);
+});
+
+const billopen = ShoppingCart.reduce((acc, item) => (acc + item.price), 0)
+
+console.log(bill);
 
 
-
+const billMax = ShoppingCart .filter((num) =>  {
+      console.log(ShoppingCart.price >= 5999);
+});
