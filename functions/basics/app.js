@@ -43,16 +43,33 @@ function returnSecondValue(getarray) {
 // console.log(returnSecondValue(Array));    //pass array
 
 
-console.log(addOne(4));
+// console.log(addOne(4));
 
-function addOne (num) {
-    return num + 2;
+// function addOne (num) {
+//     return num + 2;
+// }
+
+
+
+
+
+function f1(f2){
+    return f2() + 40;
 }
 
-
-addTwo(3);                                          
-
-const addTwo = function (num) {
-     return num + 3;
+function f3(){
+    return 10;
 }
 
+// console.log(f1(f3));
+
+const fruits = ['apple', 'orange', true, 'watermelon', 'mango', 'banana'];
+
+forEach((Element) => console.log(Element));
+
+
+function forEach(fnct){
+  for(let i = 0; i<fruits.length; i++){
+    fnct(fruits[i]);
+  }
+}
