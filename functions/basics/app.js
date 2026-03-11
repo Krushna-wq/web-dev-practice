@@ -73,3 +73,4 @@ function forEach(fnct){
     fnct(fruits[i]);
   }
 }
+
