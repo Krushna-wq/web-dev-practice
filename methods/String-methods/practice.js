@@ -130,4 +130,22 @@ console.log(maincheck);
 
 let Hii = "Hello World"
 
-console.log(Hii.toUpperCase)
+console.log(Hii.toUpperCase())
+
+let count = 0;
+
+for(let i = 0; i<=fruit.length; i++){
+   if(fruit[i] == "a"){
+    count++;
+   }
+}
+console.log(count);
+
+let greet = "h e l l o        "
+let newGreet = greet.trim();
+console.log(newGreet.length, greet.length);
+
+let Fname = "william"
+let Lname = "byers"
+
+console.log(Fname.concat(" ",Lname));
