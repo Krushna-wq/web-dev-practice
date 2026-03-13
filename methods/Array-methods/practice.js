@@ -81,17 +81,79 @@ console.log(Array.isArray(arrMain))
 let arr4 = [1, 2, 3, 4]
 
 let sliced = arr4.slice(1, 3);
-console.log(sliced);
+// console.log(sliced);
 
 let compare = arr4 == sliced;
 
-console.log(Array.isArray(arr4) , Array.isArray(sliced))
+// console.log(Array.isArray(arr4) , Array.isArray(sliced))
 
 arr4.splice(2,1);
 
 // console.log(cut);
-console.log(arr4);
+// console.log(arr4);
 
-arr4.splice(3, 0, 5)
+arr4.splice(2, 0, 5)
 
-console.log(arr4);
+// console.log(arr4);
+
+let newarr = [1, 2, 3, 4, 5]
+
+newarr.splice(2, 1, 10)
+
+// console.log(newarr)
+
+let arr5 = [2, 4, 6, 8, 10, 12, 14]
+
+let exctracted = arr5.splice(2, 5)
+
+// console.log(exctracted);
+let arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr6.forEach((e, i, array) => { 
+    // console.log(e, arr6[i])
+    // console.log(array)
+});
+
+arr6.forEach((e)  => {
+  console.log(e*2)
+})
+
+
+let arrFruits = ["apple","banana","mango"];
+
+arrFruits.forEach((e, i)=> {
+    console.log(`${e} ${i}`)
+})
+
+let arrSqr = [1,2,3,4];
+
+    arrSqr.forEach((e) => {
+        console.log(e*e)
+    })
+
+let words = ["JS","Python","Java","C++"];
+
+words.forEach((e) => {
+    console.log(`${e} has length ${e.length}`)
+})
+
+let names = ["Krushna","Rahul","Amit"];
+
+names.forEach((e) => {
+    console.log(`Hello ${e}`)
+})
+
+let nums = [10,20,30];
+
+nums.forEach((e) => {
+    let str = e.toString();
+    console.log(`Number ${str}`)
+})
+
+let arrFindEven = [1,2,3,4,5,6];
+
+arrFindEven.forEach((e) => {
+    if(e%2 == 0){
+        console.log(e)
+    }
+})
