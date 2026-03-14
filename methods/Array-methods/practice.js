@@ -157,3 +157,52 @@ arrFindEven.forEach((e) => {
         console.log(e)
     }
 })
+
+const products = [
+  {name:"Laptop", price:50000},
+  {name:"Phone", price:20000},
+  {name:"Tablet", price:30000}
+];
+
+products.forEach(p => {
+    p.catogory = "Electronics"
+    console.log(`this is ${p.name} for ${p.price} and it is an ${p.catogory} device`)
+});
+
+products.map((pro) => {
+    console.log(`${pro.name}`)
+})
+
+let filtered = products.filter((pro) => pro.price>25000)
+
+console.log(filtered);
+
+
+let total = products.reduce((acc, currval) => {
+    return acc + currval.price;
+} ,0)
+
+console.log(total);
+
+products.forEach((product) => {
+    let all = product.name.toUpperCase();
+    console.log(all);
+})
+
+let namess = ["raj", "rahul", "amit", "sneha"]
+
+namess.map((name) => {
+    let upper = name.toUpperCase()
+    console.log(upper);
+})
+
+names.map((name) => {
+    console.log(`Mr.${name}`)
+})
+
+let num1 = [10, 20, 30]
+
+num1.map((number) => {
+    let increase = number + 5;
+    console.log(number+5)
+})
