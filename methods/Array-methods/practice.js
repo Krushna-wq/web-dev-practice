@@ -200,9 +200,39 @@ names.map((name) => {
     console.log(`Mr.${name}`)
 })
 
-let num1 = [10, 20, 30]
+const num1 = [10, 20, 30]
 
-num1.map((number) => {
-    let increase = number + 5;
-    console.log(number+5)
+let result = num1.map((number) => {
+    return number + 5;
 })
+console.log(result)
+
+const numbers = [1, 2, 3, 4];
+
+// Use map() to create a new array with each element doubled
+const doubled = numbers.map(num => num * 2);
+
+// console.log(doubled);
+// Output: [2, 4, 6, 8]
+
+// console.log(numbers);
+// Output: [1, 2, 3, 4] (original array is unchanged)
+ 
+
+let bill = [100,200,300];
+
+let gstBill = bill.map((item) => {
+    let gst = item * 0.18;
+    return item + gst;
+})
+
+console.log(gstBill);
+
+
+let str3 = ["harry","rahul","amit"];
+
+let cap = str3.map((name) => {
+   return name.charAt(0).toUpperCase();
+})
+
+console.log(cap)
