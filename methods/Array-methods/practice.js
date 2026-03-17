@@ -230,9 +230,9 @@ console.log(gstBill);
 
 
 let str3 = ["harry","rahul","amit"];
+let cap = str3.map(name => {
+    return name[0].toUpperCase() + name.slice(1);
 
-let cap = str3.map((name) => {
-   return name.charAt(0).toUpperCase();
 })
 
 console.log(cap)
