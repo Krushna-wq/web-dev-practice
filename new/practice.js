@@ -51,33 +51,31 @@ dog.speak(); // Animal speaks
 console.log(typeof dog)
 
 
-Array.prototype.mapTwo = function(hello) {
-    let result = [];
-    for(let i = 0; i<this.length; i++){
-        result.push(hello(this[i], i, this));
+function getPriceWithTax(price){
+    this.price = price;
+    this.total = function(){
+      let gstAmount = this.price * 0.18;
+      return gstAmount + this.price;
     }
-     return result;
+}
+
+const amount1 = new getPriceWithTax(500);
+
+console.log(amount1.total());
+
+function Student(name, marks){
+    this.name = name;
+    this.marks = marks;
+    this.Ispass = function(){
+        if(marks>=40){
+            return `${this.name} is pass`
+        }else{
+            return `${this.name} is fail`
+        }
+    }
 };
 
 
-function hello(value){
-   return value + 2;
-}
+const std1 = new Student("sam", 50);
 
-console.log([1, 2, 3, 4].mapTwo(hello));
-
-
-
-Array.prototype.Myreduce = function(cb, initialvalue){
-    let acc = initialvalue;
-    for(let i = 0; i<this.length ; i++){
-        acc = cb(acc, this[i], i, this)
-    }
-    return acc;
-}
-
-function calculate(acc, curr){
-   return acc + curr;
-}
-
-console.log([1, 2, 3].Myreduce(calculate, 0))
+console.log(std1.Ispass());
