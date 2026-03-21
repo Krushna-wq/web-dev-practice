@@ -79,3 +79,25 @@ function Student(name, marks){
 const std1 = new Student("sam", 50);
 
 console.log(std1.Ispass());
+
+function CarAcc(brand, speed){
+    this.brand = brand;
+    this.speed = speed;
+    this.current = function(){
+        return `current speed is ${this.speed + 20}`
+    }
+}
+
+CarAcc.prototype.NewCar = function(){
+    // this.brand = brand; 
+    // this.speed = speed;
+    // this.current = function(){
+    //     return 
+    // }
+}
+
+const carfirst = new CarAcc("Audi", 130);
+const carSecond = new CarAcc("Land Rover", 140);
+
+console.log(carfirst.current());
+console.log(carSecond.current())
