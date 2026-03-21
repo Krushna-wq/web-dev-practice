@@ -1,0 +1,21 @@
+{
+  "name": "js-foundation-practice",
+  "version": "1.0.0",
+  "description": "This repository documents my structured journey of strengthening core JavaScript fundamentals before moving to React and the MERN stack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krushna-wq/DOM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Krushna-wq/DOM/issues"
+  },
+  "homepage": "https://github.com/Krushna-wq/DOM#readme"
+}

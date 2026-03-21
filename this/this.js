@@ -154,3 +154,13 @@ const greetFn = user4.greet;
 
 
 greetFn.call(user4);
+
+
+// new key word
+
+function Tatacar(chassisNumber, modelName){
+    this.chassisNumber = chassisNumber;
+    this.modelName = modelName;
+    this.fuelLvl = 100;
+}
+
