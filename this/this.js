@@ -149,18 +149,72 @@ const user4 = {
     console.log(`Hello ${this.name}`);
   }
 };
-
+ 
 const greetFn = user4.greet;
 
+greetFn.call(user4)
 
-greetFn.call(user4);
+
+let str = "  masala chai ";
+
+let trimmed = str.trim();
 
 
-// new key word
+console.log(trimmed.length);
+console.log(typeof str)
 
-function Tatacar(chassisNumber, modelName){
-    this.chassisNumber = chassisNumber;
-    this.modelName = modelName;
-    this.fuelLvl = 100;
+
+const MainUser = {
+ user: "krishna"
 }
 
+function greet(){
+   return `Hello, I am ${this.user}`
+}
+
+console.log(greet.call(MainUser));
+
+ const introForUser = {
+   name: "krishna",
+ }
+
+ function introduce(city, country){
+  return `i am ${this.name} from ${city}, ${country}`
+ }
+
+//  console.log(introduce.call(introForUser, "Pune", "India"))
+
+ console.log(introduce.apply(introForUser, ["Pune", "India"]));
+
+const twoNum = {
+  a: 3,
+  b: 6
+}
+ function sum(){
+  return this.a + this.b;
+ }
+
+ console.log(sum.call(twoNum));
+ console.log(sum.apply(twoNum));
+
+ const personMain = {
+  name: "benny"
+ }
+
+ function Sayhello (){
+  return `Hii, ${this.name}`;
+ }
+
+ const person1 = Sayhello.bind(personMain);
+
+ console.log(person1());
+
+ const Numbers = {
+  a: 2
+ }
+
+ function NumberAdd(b){
+   return `${this.a} + b`;
+ }
+
+ const Number1Add = 
