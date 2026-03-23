@@ -217,4 +217,32 @@ const twoNum = {
    return `${this.a} + b`;
  }
 
- const Number1Add = 
+
+try {
+  console.log(a)
+} catch (error) {
+   console.log("something went wrong")  
+}
+
+
+function divide (a, b){
+  try {
+    return a / b;
+  } catch (error) {
+    return error.message;
+  }
+}
+
+console.log(divide(10, 0));
+
+function test() {
+  try {
+    console.log(a); // error
+  } catch (err) {
+    console.log("Error handled:", err.message);
+  }
+}
+
+test();
+
+console.log('hello world');
