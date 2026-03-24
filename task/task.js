@@ -53,3 +53,52 @@ const highItem = cart.forEach((item) => {
 })
 
 console.log(highItem);
+
+
+
+function handling(){
+    try {
+        console.log(x)
+    } catch (error) {
+        console.log("Error Handled");
+    }
+}
+
+handling();
+
+function CheckAge(age){
+    try {
+        if(age < 18){
+            throw new Error("underage");
+        }else{
+            console.log("access granted")
+        }
+        
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+CheckAge(10);
+
+
+setTimeout(() => {
+    console.log("hello after delay")
+}, 2000);
+
+console.log("start")
+
+setTimeout(() => {
+    console.log("Middle")
+}, 1000)
+
+console.log("End")
+
+function greet(name){
+    console.log("Hello" + name)
+}
+
+setTimeout(() => {
+    greet("benny");
+})
+
