@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f3f4f6, #dbeafe);
+            color: #1f2937;
+        }
+
+        body > div:first-of-type,
+        body > div:last-of-type {
+            width: 100%;
+            max-width: 520px;
+        }
+
+        body {
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        body > div:first-of-type {
+            display: flex;
+            gap: 12px;
+            padding: 20px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+            backdrop-filter: blur(8px);
+        }
+
+        #ip {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #ip:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+
+        #clickHere {
+            border: none;
+            border-radius: 12px;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #clickHere:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        #clickHere:active {
+            transform: translateY(0);
+        }
+
+        body > div:last-of-type {
+            padding: 22px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        #todo {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #todo li {
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            word-break: break-word;
+        }
+
+        #todo li:hover {
+            transform: translateX(4px);
+            background: #dbeafe;
+        }
+
+        @media (max-width: 560px) {
+            body > div:first-of-type {
+                flex-direction: column;
+            }
+
+            #clickHere {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input id="ip" type="text" placeholder="enter your task">
+        <button id="clickHere">Add+</button>
+    </div>
+
+    <div>
+        <ul id="todo">
+        </ul>
+    </div>
+    <script>
+        const buttonCLicked = document.getElementById("clickHere");
+        const input = document.getElementById("ip");
+        const ul = document.getElementById("todo")
+        buttonCLicked.addEventListener("click", function () {
+
+            const value = input.value;
+            console.log("clicked", value);
+
+            const li = document.createElement("li");
+
+            li.innerText = value;
+            li.addEventListener("click", function () {
+                li.remove();
+            })
+            ul.appendChild(li);
+            input.value = "";
+        })
+    </script>
+</body>
+
+</html>
