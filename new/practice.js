@@ -100,4 +100,18 @@ const carfirst = new CarAcc("Audi", 130);
 const carSecond = new CarAcc("Land Rover", 140);
 
 console.log(carfirst.current());
-console.log(carSecond.current())
+console.log(carSecond.current());
+
+
+
+function BankAccount(name, amount, balance){
+ this.name = name;
+ this.balance = balance;
+ this.amount = amount;
+ this.deposite = function(){
+    return `added ${this.balance + this.amount}RS`
+ }
+ this.withdram = function(){
+    return `${this.amount} is debited from your accound your current balance is ${this.amount - this.balance}`
+ }
+}
