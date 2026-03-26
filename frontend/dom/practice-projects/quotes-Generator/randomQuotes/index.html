@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="quotes"></ul>
+    <script>
+        const random = document.getElementById("quotes")
+        (async () => {
+          fetch('https://api.freeapi.app/api/v1/public/quotes', {
+            method: "GET",
+          }).then(response => response.json()) // json into object
+          .then(data => {
+            for(const obj of data.data.data){
+                const li = document.createElement("li");
+                li.innerText = obj.content;
+                random.appenChild("li");
+            }
+          })
+        })()
+    </script>
+</body>
+</html>

@@ -102,3 +102,10 @@ setTimeout(() => {
     greet("benny");
 })
 
+const Promise = new Promise((resolve, reject) => {
+      resolve("Hello")
+})
+
+Promise.then((data) => {
+    console.log(data);
+})
