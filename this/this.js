@@ -227,6 +227,9 @@ try {
 
 function divide (a, b){
   try {
+    if(b == 0){
+      throw new Error("cannot divded by zero")
+    }
     return a / b;
   } catch (error) {
     return error.message;
