@@ -1,0 +1,256 @@
+:root {
+    --bg: #f4efe6;
+    --panel: rgba(255, 252, 247, 0.88);
+    --panel-strong: #fffaf2;
+    --text: #1f2937;
+    --muted: #5f6b7a;
+    --line: rgba(31, 41, 55, 0.08);
+    --accent: #0f766e;
+    --accent-soft: rgba(15, 118, 110, 0.12);
+    --warn: #b45309;
+    --warn-soft: rgba(180, 83, 9, 0.12);
+    --danger: #b91c1c;
+    --danger-soft: rgba(185, 28, 28, 0.12);
+    --shadow: 0 20px 45px rgba(84, 64, 39, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(180, 83, 9, 0.16), transparent 30%),
+        linear-gradient(160deg, #f7f1e8 0%, #efe5d6 100%);
+}
+
+.app-shell {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 40px 0 48px;
+}
+
+.hero,
+.activity-panel,
+.promise-card {
+    backdrop-filter: blur(10px);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    padding: 28px;
+    border-radius: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: var(--muted);
+}
+
+.hero h1,
+.activity-header h2,
+.card-title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    max-width: 10ch;
+}
+
+.hero-copy {
+    margin: 18px 0 0;
+    max-width: 62ch;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+button {
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 180ms ease, opacity 180ms ease, background-color 180ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+.primary-btn {
+    color: white;
+    background: linear-gradient(135deg, #0f766e, #115e59);
+}
+
+.ghost-btn {
+    color: var(--text);
+    background: white;
+    border: 1px solid var(--line);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.promise-card {
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.card-top {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.card-title {
+    font-size: 1.15rem;
+}
+
+.card-description {
+    margin: 12px 0 18px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 0.97rem;
+}
+
+.status-pill {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.status-idle {
+    color: var(--muted);
+    background: rgba(95, 107, 122, 0.12);
+}
+
+.status-pending {
+    color: var(--warn);
+    background: var(--warn-soft);
+}
+
+.status-resolved {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.status-rejected {
+    color: var(--danger);
+    background: var(--danger-soft);
+}
+
+.result-box {
+    min-height: 72px;
+    margin: 0 0 18px;
+    padding: 14px;
+    border-radius: 18px;
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.card-btn {
+    width: 100%;
+    background: #1f2937;
+    color: #fffaf2;
+}
+
+.activity-panel {
+    margin-top: 24px;
+    border-radius: 28px;
+    padding: 24px;
+}
+
+.activity-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.feed-hint {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.activity-log {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.activity-item {
+    padding: 14px 16px;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    background: var(--panel-strong);
+}
+
+.activity-meta {
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.empty-log {
+    color: var(--muted);
+    text-align: center;
+    padding: 24px 10px;
+    border: 1px dashed var(--line);
+    border-radius: 18px;
+}
+
+@media (max-width: 640px) {
+    .app-shell {
+        width: min(100% - 20px, 1120px);
+        padding-top: 20px;
+    }
+
+    .hero,
+    .activity-panel,
+    .promise-card {
+        border-radius: 22px;
+    }
+
+    .activity-header {
+        align-items: start;
+        flex-direction: column;
+    }
+}

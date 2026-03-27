@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Practice UI</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero">
+            <p class="eyebrow">JavaScript Practice</p>
+            <h1>Promise Playground</h1>
+            <p class="hero-copy">
+                Your promise examples are now visual. Run each case and watch pending,
+                resolved, and rejected states update on screen.
+            </p>
+
+            <div class="hero-actions">
+                <button id="run-all-btn" class="primary-btn" type="button">Run All Examples</button>
+                <button id="clear-log-btn" class="ghost-btn" type="button">Clear Activity</button>
+            </div>
+        </section>
+
+        <section class="grid" id="card-container"></section>
+
+        <section class="activity-panel">
+            <div class="activity-header">
+                <div>
+                    <p class="eyebrow">Live Output</p>
+                    <h2>Activity Feed</h2>
+                </div>
+                <span class="feed-hint">Newest update appears on top</span>
+            </div>
+            <div id="activity-log" class="activity-log"></div>
+        </section>
+    </main>
+
+    <script src="./practice.js"></script>
+</body>
+</html>
