@@ -1,30 +1,31 @@
-# JavaScript Foundation Practice
+# Web Development Practice
 
-This repository documents my structured journey of strengthening core JavaScript fundamentals before moving to React and the MERN stack.
+This repository documents my learning journey in web development.
 
-Focus Areas:
-- Objects & Object Literals
-- Functions & Arrow Functions
-- Scope & Lexical Scope
-- this Keyword
-- Higher Order Functions
-- map / filter / reduce
-- DOM Manipulation, Events and mini task
-- Async JavaScript (Promises, async/await, fetch)
+I started with JavaScript fundamentals and have now completed core concepts. I am currently moving towards backend development and will continue progressing towards fullstack (MERN stack).
 
-Purpose:
-To build strong problem-solving ability and JavaScript thinking through daily practice, small experiments, and logic-based mini implementations.
+## JavaScript (Completed)
 
-Structure:
-- basics → syntax & early experiments
-- objects → object creation, access, updates
-- functions → function logic & mini projects
-- dom → DOM manipulation & event practice
-- upcoming → scope, async, hof, react prep
+* Objects & Object Literals
+* Functions & Arrow Functions
+* Scope & Lexical Scope
+* this Keyword
+* Higher Order Functions
+* map / filter / reduce
+* DOM Manipulation & Events
+* Async JavaScript (Promises, async/await, fetch)
 
-- Improving repository structure and documentation.
+## Current Focus
 
+* Backend development using Node.js and Express
 
-Note:
-This is a learning and reinforcement repository, not a final UI/UX project repository.
+## Purpose
 
+* Strengthen core JavaScript concepts
+* Improve problem-solving skills
+* Build consistency through daily practice
+* Transition from frontend basics to backend and fullstack development
+
+## Note
+
+This is a learning repository focused on practice and understanding, not a final project or UI-focused repository.
