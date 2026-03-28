@@ -1,0 +1,19 @@
+{
+  "name": "mynode",
+  "version": "1.0.0",
+  "description": "a project to learn typescript",
+  "keywords": [
+    "chaicode"
+  ],
+  "license": "ISC",
+  "author": "Krushna",
+  "type": "commonjs",
+  "main": "chai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "react": "^19.2.4"
+  }
+}
