@@ -7,6 +7,7 @@ console.log(add(3, 34));
 class InMemoryDB {
     _db;
     constructor() {
+        this._db = new Map();
     }
     insertUser(data) {
         if (this._db.has(data.id)) {
