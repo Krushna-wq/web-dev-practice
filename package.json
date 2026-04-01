@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Krushna-wq/DOM/issues"
   },
-  "homepage": "https://github.com/Krushna-wq/DOM#readme"
+  "homepage": "https://github.com/Krushna-wq/DOM#readme",
+  "devDependencies": {
+    "tsc-watch": "^7.2.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
