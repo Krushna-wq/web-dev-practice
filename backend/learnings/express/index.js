@@ -1,17 +1,17 @@
-const express =  require('express');
+const express = require("express");
 
 const app = express();
+const port =  8080;
 
-const PORT = 8080;
-
-app.listen(PORT, () =>{
-    console.log(`Server Is Running on port ${PORT}`);
+app.listen(port, () => {
+    console.log("app listing on port", port);
 })
+
+app.get('/menu', (req, res) => {
+    res.json({ items: ["ABC", "XYZ"]});
+});
 
 app.use((req, res) => {
-    console.log("request received")
-    // console.log(req);
-    let code =  "<h1>Hello world</h1>"
-    res.send(code);
-   
-})
+    console.log("request received");
+    res.send("<h1>Hello World</h1>");
+});
